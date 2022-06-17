@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OngFormComponent } from './components/ong-form/ong-form.component';
 import { AdministracaoComponent } from './components/pages/administracao/administracao.component';
 import { BannersComponent } from './components/pages/banners/banners.component';
 import { ComboComponent } from './components/pages/combo/combo.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'banners',component:BannersComponent},
   {path:'combo',component:ComboComponent},
   {path:'ongs',component:OngsComponent},
-  {path:'usuarios',component:UsuariosComponent}
+  {path:'usuarios',component:UsuariosComponent},
+ 
   
 ];
 
