@@ -20,6 +20,7 @@ import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    
   
 
   ],
