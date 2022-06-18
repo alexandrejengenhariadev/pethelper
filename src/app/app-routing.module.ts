@@ -7,6 +7,7 @@ import { ComboComponent } from './components/pages/combo/combo.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { OngsComponent } from './components/pages/ongs/ongs.component';
 import { UsuariosComponent } from './components/pages/usuarios/usuarios.component';
+import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:'combo',component:ComboComponent},
   {path:'ongs',component:OngsComponent},
   {path:'usuarios',component:UsuariosComponent},
-  {path:'ongs/new',component:OngFormComponent}
+  {path:'ongs/new',component:NovaOngComponent}
   
  
   

@@ -284,9 +284,10 @@ form {
     font-size: 0.8em;
 }
 input[type="submit"]{
+    color:#050505;
     background-color: #efefef;
     border: 2px solid transparent;
-    padding: 0.6em;
+    padding: 0.6em 1em;
     font-weight: bold;
     font-size: 1.1em;
     cursor: pointer;

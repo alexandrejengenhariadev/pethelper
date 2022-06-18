@@ -16,6 +16,7 @@ import { AdministracaoComponent } from './components/pages/administracao/adminis
 import { HomeComponent } from './components/pages/home/home.component';
 import { OngFormComponent } from './components/ong-form/ong-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component';
 
 
 
@@ -32,6 +33,7 @@ import { MessagesComponent } from './components/messages/messages.component';
     HomeComponent,
     OngFormComponent,
     MessagesComponent,
+    NovaOngComponent,
 
   ],
   imports: [
