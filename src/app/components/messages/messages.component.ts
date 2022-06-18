@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faTimes} from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-messages',
@@ -7,7 +7,7 @@ import {faTimes} from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-  faTimes=faTimes;
+ 
 
   constructor() { }
 

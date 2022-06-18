@@ -16,6 +16,8 @@ const routes: Routes = [
   {path:'combo',component:ComboComponent},
   {path:'ongs',component:OngsComponent},
   {path:'usuarios',component:UsuariosComponent},
+  {path:'ongs/new',component:OngFormComponent}
+  
  
   
 ];

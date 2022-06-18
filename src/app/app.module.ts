@@ -18,6 +18,7 @@ import { OngFormComponent } from './components/ong-form/ong-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { MessagesComponent } from './components/messages/messages.component';
     AdministracaoComponent,
     HomeComponent,
     OngFormComponent,
-    MessagesComponent
+    MessagesComponent,
+
   ],
   imports: [
     BrowserModule,
