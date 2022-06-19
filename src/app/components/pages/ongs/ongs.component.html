@@ -3,4 +3,36 @@
 <br>
 <br>
 <br>
-<p>ongs works!</p>
+<div class="home-container">
+    <h1>Ongs cadastradas:</h1>
+
+    <div *ngIf="ongs.length > 0; else noOngs ">            
+                    <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
+                    <div class="ongs-container">
+                        <div class="ong" *ngFor="let ong of ongs">
+                            <img src="{{baseApiUrl}}uploads/{{ong.imagem}}" 
+                                 alt="{{ong.nome}}" >
+                            <div class="banner-content">
+                                <p class="secondary-color">ONG</p>
+                                
+                                <h3>{{ong.nome}}</h3>
+                               <p class="date">Em: {{ong.created_at}}</p>
+                               <p><a routerLink="ongs/{{ong.id}}">Editar:</a></p>
+    
+                                                              
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    
+                   
+
+        </div>
+        <ng-template #noOngs>
+            <h1>Não registros no sistema!</h1>
+        </ng-template>
+        
+
+    
+</div>

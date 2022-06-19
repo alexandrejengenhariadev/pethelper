@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OngService } from 'src/app/services/ong.service';
+import { Ong } from 'src/app/Ong';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-ongs',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OngsComponent implements OnInit {
 
-  constructor() { }
+  allOngs:Ong[] = []
+  ongs:Ong[] = []
+  baseApiUrl = environment.baseApiUrl
+
+
+  constructor(private ongService: OngService) { }
 
   ngOnInit(): void {
+    this.ongService.getOngs().subscribe((items)=>{
+      const data = items.data;
+      data.map((item)=>{
+        item.created_at=new Date(item.created_at!).toLocaleDateString(
+          'pt-BR'
+        );
+      });
+
+      this.allOngs = data;
+      this.ongs = data;
+    });
+
   }
+
 
 }
