@@ -18,6 +18,10 @@ export class OngService {
   getOngs():Observable<Response<Ong[]>>{
     return this.http.get<Response<Ong[]>>(this.apiUrl);
   }
+  getOng(id:number):Observable<Response<Ong>>{
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Response<Ong>>(url);
+  }
   createOng(formData:FormData):Observable<FormData>{
     return this.http.post<FormData>(this.apiUrl,formData);
   }

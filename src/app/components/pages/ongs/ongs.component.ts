@@ -3,6 +3,8 @@ import { OngService } from 'src/app/services/ong.service';
 import { Ong } from 'src/app/Ong';
 import { environment } from 'src/environments/environment';
 
+
+
 @Component({
   selector: 'app-ongs',
   templateUrl: './ongs.component.html',
@@ -13,6 +15,8 @@ export class OngsComponent implements OnInit {
   allOngs:Ong[] = []
   ongs:Ong[] = []
   baseApiUrl = environment.baseApiUrl
+  
+  searchTerm:string='';
 
 
   constructor(private ongService: OngService) { }
@@ -29,6 +33,16 @@ export class OngsComponent implements OnInit {
       this.allOngs = data;
       this.ongs = data;
     });
+
+  }
+  search(e:Event):void{
+    const target = e.target as HTMLInputElement
+    const value = target.value
+
+    this.ongs = this.allOngs.filter(ong =>{
+     return ong.nome.toLowerCase().includes(value);
+    });
+
 
   }
 

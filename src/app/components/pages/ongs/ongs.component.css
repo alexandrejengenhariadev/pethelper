@@ -1,3 +1,4 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 .home-container{
     display: flex;
     align-items: center;
@@ -35,7 +36,27 @@
 a{
     color: dimgrey;
     padding: .3em;
+    text-decoration: none;
 }
 a:hover{
     background-color: #efefef;
+}
+.search-container{
+    margin-bottom: 2em;
+    width: 100%;
+}
+.search-container form{
+    width: 30%;
+    position: relative;
+}
+.search-container i{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+}
+.search-container input{
+    padding: .5em;
+    width: 100%;
+    text-align: center;
 }

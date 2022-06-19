@@ -5,6 +5,14 @@
 <br>
 <div class="home-container">
     <h1>Ongs cadastradas:</h1>
+    <div class="search-container">
+        <form >
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Buscar Ong"
+            (input)="search($event)"
+            >
+        </form>
+    </div>
 
     <div *ngIf="ongs.length > 0; else noOngs ">            
                     <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
@@ -17,7 +25,7 @@
                                 
                                 <h3>{{ong.nome}}</h3>
                                <p class="date">Cadastrado em: {{ong.created_at}}</p>
-                               <p><a routerLink="ongs/{{ong.id}}">Editar:</a></p>
+                               <p><a routerLink="{{ong.id}}">Editar:</a></p>
     
                                                               
                             </div>
