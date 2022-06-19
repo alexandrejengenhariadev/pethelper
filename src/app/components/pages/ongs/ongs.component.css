@@ -1,0 +1,41 @@
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home-container h1{
+    margin-bottom: 0.5em;
+
+}
+.ongs-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+.ong{
+    width: 32%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.ong img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.ong h3, .ong p{
+    margin-bottom: 1em;
+}
+.ong .date{
+    font-size: .7em;
+    font-style: italic;
+}
+a{
+    color: dimgrey;
+    padding: .3em;
+}
+a:hover{
+    background-color: #efefef;
+}
