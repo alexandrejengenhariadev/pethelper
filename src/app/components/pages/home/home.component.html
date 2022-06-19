@@ -30,19 +30,20 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
 <!--DESTAQUES-->
-<div class="container" id="featured-container">
+<div class="home-container" id="featured-container">
 
     <div class="col-12" id="featured-images">
 
-        <div class="row g-4">
-            
+        <div class="row g-4" *ngIf="ongs.length > 0; else noOngs ">            
                     <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
-                    <div class="col-12 col-md-4">
-                        <img src="" class="img-fluid">
+                    <div class="col-12 col-md-4" *ngFor="let ong of ongs">
+                        <img src="{{baseApiUrl}}uploads/{{ong.imagem}}" alt="{{ong.nome}}" class="img-fluid">
                         <div class="banner-content">
                             <p class="secondary-color">ONG</p>
-                            <h3>teste1</h3>
+                            
+                            <h3>{{ong.nome}}</h3>
 
                             <form action="doacao.php" method="POST">
                                 <input type="hidden" name="nome" value="">
@@ -52,10 +53,15 @@
                             </form>
                             
                         </div>
-                        <h3 class="text-center">teste2</h3>
+                        <h3 class="text-center">{{ong.nome}}</h3>
                     </div>
+                   
 
         </div>
+        <ng-template #noOngs>
+            <h1>Não registros no sistema!</h1>
+        </ng-template>
+        
 
     </div>
 </div>

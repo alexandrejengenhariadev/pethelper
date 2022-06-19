@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Ong } from 'src/app/Ong';
-import { OngService } from 'src/app/services/ong.service';
+import { Router } from '@angular/router';
 
+import { OngService } from 'src/app/services/ong.service';
+import { MessagesService } from 'src/app/services/messages.service';
 @Component({
   selector: 'app-nova-ong',
   templateUrl: './nova-ong.component.html',
@@ -10,7 +12,10 @@ import { OngService } from 'src/app/services/ong.service';
 export class NovaOngComponent implements OnInit {
   btnText="Cadastrar";
 
-  constructor(private ongService: OngService) { }
+  constructor(private ongService: OngService, 
+    private messagesService:MessagesService,
+    private router:Router
+    ) { }
 
   ngOnInit(): void {}
   async createHandler(ong:Ong){
@@ -27,6 +32,10 @@ export class NovaOngComponent implements OnInit {
       formData.append('imagem',ong.imagem);
     }
     await this.ongService.createOng(formData).subscribe();
+
+    this.messagesService.add('Ong adicionada com sucesso!');
+
+    this.router.navigate(['/']);
     
 
   }
