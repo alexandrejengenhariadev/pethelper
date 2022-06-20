@@ -25,4 +25,15 @@ export class OngService {
   createOng(formData:FormData):Observable<FormData>{
     return this.http.post<FormData>(this.apiUrl,formData);
   }
-}
+  removeOng(id:number){
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
+  }
+  updateOng(id:number, formData:FormData):Observable<FormData>{
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<FormData>(url, formData);
+  }
+
+
+  }
+

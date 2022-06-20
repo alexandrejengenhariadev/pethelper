@@ -11,20 +11,22 @@ import { Ong } from 'src/app/Ong';
 export class OngFormComponent implements OnInit {
   @Output() onSubmit = new EventEmitter<Ong>();
   @Input() btnText!: string;
+  @Input() ongData:Ong | null = null;
 
   ongForm!:FormGroup;
+ 
 
   constructor() { }
 
   ngOnInit(): void {
     this.ongForm = new FormGroup({
-      id:new FormControl(''),
-      nome:new FormControl('',[Validators.required]),
-      cep:new FormControl('',[Validators.required]),
-      endereco:new FormControl('',[Validators.required]),
-      telefone:new FormControl('',[Validators.required]),
-      responsavel:new FormControl('',[Validators.required]),
-      email:new FormControl('',[Validators.required]),
+      id:new FormControl(this.ongData ? this.ongData.id :''),
+      nome:new FormControl(this.ongData ? this.ongData.nome : '',[Validators.required]),
+      cep:new FormControl(this.ongData ? this.ongData.cep :'',[Validators.required]),
+      endereco:new FormControl(this.ongData ? this.ongData.endereco :'',[Validators.required]),
+      telefone:new FormControl(this.ongData ? this.ongData.telefone :'',[Validators.required]),
+      responsavel:new FormControl(this.ongData ? this.ongData.responsavel :'',[Validators.required]),
+      email:new FormControl(this.ongData ? this.ongData.email :'',[Validators.required]),
       imagem :new FormControl('')
     });
   }

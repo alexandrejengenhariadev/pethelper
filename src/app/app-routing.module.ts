@@ -9,6 +9,7 @@ import { OngsComponent } from './components/pages/ongs/ongs.component';
 import { UsuariosComponent } from './components/pages/usuarios/usuarios.component';
 import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component';
 import { OngComponent } from './components/pages/ong/ong.component';
+import { EditOngComponent } from './components/pages/edit-ong/edit-ong.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'ongs',component:OngsComponent},
   {path:'usuarios',component:UsuariosComponent},
   {path:'ongs/new',component:NovaOngComponent},
+  {path:'ongs/edit/:id',component:EditOngComponent},
   {path:'ongs/:id',component:OngComponent}
   
  

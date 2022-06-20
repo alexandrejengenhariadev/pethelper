@@ -1,6 +1,7 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 .message{
     position: fixed;
-    top: 3em;
+    top: 10em;
     width: 50%;
     margin-left: 50%;
     left: -25%;
