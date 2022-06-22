@@ -18,6 +18,7 @@ import { OngFormComponent } from './components/ong-form/ong-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component';
 import { OngComponent } from './components/pages/ong/ong.component';
+import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
 
 
 
@@ -37,6 +38,7 @@ import { OngComponent } from './components/pages/ong/ong.component';
     MessagesComponent,
     NovaOngComponent,
     OngComponent,
+    CadastroComponent,
 
   ],
   imports: [

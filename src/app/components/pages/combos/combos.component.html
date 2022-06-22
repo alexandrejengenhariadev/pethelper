@@ -1,0 +1,38 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="home-container">
+    <h1>Combos cadastrados:</h1>
+      <div *ngIf="combos.length > 0; else noCombos ">            
+                    <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
+                    <div class="ongs-container">
+                        <div class="ong" *ngFor="let combo of combos">
+                            <div class="banner-content">
+                                <p class="secondary-color">COMBO</p>
+                                
+                                <h3>{{combo.id}}</h3>
+                              
+                                                              
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    
+                   
+
+        </div>
+        <ng-template #noCombos>
+            <h1>Não há registros no sistema!</h1>
+        </ng-template>
+        
+
+    
+</div>

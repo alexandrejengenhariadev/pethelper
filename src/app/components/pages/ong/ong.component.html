@@ -2,8 +2,33 @@
 <br>
 <br>
 <br>
-<h1>teste </h1>
 
 <div class="ong" *ngIf="ong">
-    <h1>teste {{ong.nome}}</h1>
+    <h1>{{ong.nome}}</h1>
+    <img src="{{baseApiUrl}}uploads/{{ong.imagem}}" 
+          alt="{{ong.nome}}" >
+    <div class="about-ong">
+        <h3>Detalhes:</h3>
+        <p>{{ong.cep}}</p>
+        <p>{{ong.endereco}}</p>
+        
+    </div>
+    <div class="actions">
+        <h3>Ações:</h3>
+        <a routerLink="/ongs/edit/{{ong.id}}" class="edit-btn">
+            <i class="bi bi-pencil-square"></i>Editar
+        </a>
+       <button class="remove-btn" (click)="removeHandler(ong.id!)">
+        <i class="bi bi-trash" ></i>Excluir
+       </button>
+        
+    </div>
+    <div class="sobre">
+        <p>Sobre a Ong:</p>
+    </div>
+
+
+
+
+
 </div>
