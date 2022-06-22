@@ -18,7 +18,11 @@ import { OngFormComponent } from './components/ong-form/ong-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component';
 import { OngComponent } from './components/pages/ong/ong.component';
+<<<<<<< HEAD
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
+=======
+import { EditOngComponent } from './components/pages/edit-ong/edit-ong.component';
+>>>>>>> be49a3930e7252a872ebc9ae7d1bfeac1f7dee4d
 
 
 
@@ -38,7 +42,11 @@ import { CadastroComponent } from './components/pages/cadastro/cadastro.componen
     MessagesComponent,
     NovaOngComponent,
     OngComponent,
+<<<<<<< HEAD
     CadastroComponent,
+=======
+    EditOngComponent,
+>>>>>>> be49a3930e7252a872ebc9ae7d1bfeac1f7dee4d
 
   ],
   imports: [
