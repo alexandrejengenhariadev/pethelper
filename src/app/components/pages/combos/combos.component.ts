@@ -14,6 +14,7 @@ export class CombosComponent implements OnInit {
   combos:Combo[] = []
   baseApiUrl = environment.baseApiUrl
   
+  searchTerm:string='';
 
 
   constructor(private comboService: ComboService) { }
@@ -21,9 +22,18 @@ export class CombosComponent implements OnInit {
   ngOnInit(): void {
     this.comboService.getCombos().subscribe((items)=>{
       const data = items.data;
+      
       this.allCombos = data;
       this.combos = data;
     });
   }
+  search(e:Event):void{
+    const target = e.target as HTMLInputElement
+    const value = target.value
 
+    this.combos = this.allCombos.filter(ong =>{
+     return ong.id;
+    });
+
+}
 }

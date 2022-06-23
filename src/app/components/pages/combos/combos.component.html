@@ -3,25 +3,27 @@
 <br>
 <br>
 <br>
-<br>
-
-
 <div class="home-container">
     <h1>Combos cadastrados:</h1>
-      <div *ngIf="combos.length > 0; else noCombos ">            
+    <div class="search-container">
+        <form >
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Buscar Combo"
+            (input)="search($event)"
+            >
+        </form>
+    </div>
+
+    <div *ngIf="combo.length > 0; else noCombo ">            
                     <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
-                    <div class="combos-container">
-                        <div class="combo" *ngFor="let combo of combos">
+                    <div class="ongs-container">
+                        <div class="ong" *ngFor="let combo of combos">
+                            
                             <div class="banner-content">
                                 <p class="secondary-color">COMBO</p>
                                 
-                                <h3>{{combo.id}}</h3>
-                                <p>{{combo.produto1}}</p>
-                                <p>{{combo.produto2}}</p>
-                                <p>{{combo.produto3}}</p>
-                                <p>{{combo.produto4}}</p>
-                                <p>{{combo.valor}}</p>
-                                
+                                <h3>COMBO {{combo.id}}</h3>
+                               
                               
                                                               
                             </div>
@@ -33,8 +35,8 @@
                    
 
         </div>
-        <ng-template #noCombos>
-            <h1>Não há registros no sistema!</h1>
+        <ng-template #noCombo>
+            <h1>Não registros no sistema!</h1>
         </ng-template>
         
 

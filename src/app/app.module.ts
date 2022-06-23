@@ -22,6 +22,7 @@ import { CadastroComponent } from './components/pages/cadastro/cadastro.componen
 import { EditOngComponent } from './components/pages/edit-ong/edit-ong.component';
 import { ComboFormComponent } from './components/combo-form/combo-form.component';
 import { NovoComboComponent } from './components/pages/novo-combo/novo-combo.component';
+import { EditComboComponent } from './components/pages/edit-combo/edit-combo.component';
 
 
 
@@ -45,6 +46,7 @@ import { NovoComboComponent } from './components/pages/novo-combo/novo-combo.com
     EditOngComponent,
     ComboFormComponent,
     NovoComboComponent,
+    EditComboComponent,
 
   ],
   imports: [

@@ -13,6 +13,7 @@ import { CadastroComponent } from './components/pages/cadastro/cadastro.componen
 import { CombosComponent } from './components/pages/combos/combos.component';
 import { NovoComboComponent } from './components/pages/novo-combo/novo-combo.component';
 import { EditOngComponent } from './components/pages/edit-ong/edit-ong.component';
+import { EditComboComponent } from './components/pages/edit-combo/edit-combo.component';
 
 
 
@@ -21,14 +22,19 @@ const routes: Routes = [
   {path:'', component: HomeComponent  },
   {path:'administracao', component: AdministracaoComponent },
   {path:'banners',component:BannersComponent},
-  {path:'combo',component:ComboComponent},
-  {path:'combos',component:CombosComponent},
-  {path:'ongs',component:OngsComponent},
+  
+  
   {path:'usuarios',component:UsuariosComponent},
   {path:'cadastro', component:CadastroComponent},  
-  {path:'ongs/new',component:NovaOngComponent},
+  
+
+  {path:'combos',component:CombosComponent},
   {path:'combos/new',component:NovoComboComponent},
+  {path:'combos/edit/:id', component:EditComboComponent},
   {path:'combos/:id',component:ComboComponent},
+
+  {path:'ongs',component:OngsComponent},
+  {path:'ongs/new',component:NovaOngComponent},
   {path:'ongs/edit/:id',component:EditOngComponent},
   {path:'ongs/:id',component:OngComponent}
   
