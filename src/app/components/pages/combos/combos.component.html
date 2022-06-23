@@ -10,12 +10,17 @@
     <h1>Combos cadastrados:</h1>
       <div *ngIf="combos.length > 0; else noCombos ">            
                     <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
-                    <div class="ongs-container">
-                        <div class="ong" *ngFor="let combo of combos">
+                    <div class="combos-container">
+                        <div class="combo" *ngFor="let combo of combos">
                             <div class="banner-content">
                                 <p class="secondary-color">COMBO</p>
                                 
                                 <h3>{{combo.id}}</h3>
+                                <p>{{combo.produto1}}</p>
+                                <p>{{combo.produto2}}</p>
+                                <p>{{combo.produto3}}</p>
+                                <p>{{combo.produto4}}</p>
+                                <p>{{combo.valor}}</p>
                                 
                               
                                                               
