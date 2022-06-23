@@ -10,8 +10,8 @@ import { ComboService } from 'src/app/services/combo.service';
   styleUrls: ['./combos.component.css']
 })
 export class CombosComponent implements OnInit {
-  allCombos:Combo[] = []
-  combos:Combo[] = []
+  allCombo:Combo[] = []
+  combo:Combo[] = []
   baseApiUrl = environment.baseApiUrl
   
   searchTerm:string='';
@@ -23,16 +23,16 @@ export class CombosComponent implements OnInit {
     this.comboService.getCombos().subscribe((items)=>{
       const data = items.data;
       
-      this.allCombos = data;
-      this.combos = data;
+      this.allCombo = data;
+      this.combo = data;
     });
   }
   search(e:Event):void{
     const target = e.target as HTMLInputElement
     const value = target.value
 
-    this.combos = this.allCombos.filter(ong =>{
-     return ong.id;
+    this.combo = this.allCombo.filter(combo =>{
+     return combo.id;
     });
 
 }

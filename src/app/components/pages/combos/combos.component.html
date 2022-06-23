@@ -4,41 +4,64 @@
 <br>
 <br>
 <div class="home-container">
-    <h1>Combos cadastrados:</h1>
-    <div class="search-container">
-        <form >
-            <i class="bi bi-search"></i>
-            <input type="text" placeholder="Buscar Combo"
-            (input)="search($event)"
-            >
-        </form>
-    </div>
+    <h1>Combos cadastrados:</h1>  
+  
 
-    <div *ngIf="combo.length > 0; else noCombo ">            
-                    <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
-                    <div class="ongs-container">
-                        <div class="ong" *ngFor="let combo of combos">
-                            
-                            <div class="banner-content">
-                                <p class="secondary-color">COMBO</p>
-                                
-                                <h3>COMBO {{combo.id}}</h3>
-                               
-                              
-                                                              
-                            </div>
-                          
-                        </div>
+<div class="container mt-5">
+   <table class="table">
 
-                    </div>
-                    
-                   
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">produto 1</th>
+        <th scope="col">produto 2</th>
+        <th scope="col">produto 3</th>
+        <th scope="col">produto 4</th>
+        <th scope="col">valor</th>
+       
 
-        </div>
-        <ng-template #noCombo>
-            <h1>Não registros no sistema!</h1>
-        </ng-template>
-        
 
-    
-</div>
+      </tr>
+    </thead>
+    <tbody>
+      <!--Exibindo dados do banco de dados-->
+          <tr>
+            <td>{{combo}}</td>
+            <td>{{combo}}</td>
+            <td>{{combo}}</td>
+            <td>{{combo}}</td>
+            <td>{{combo}}</td>
+            
+            
+            <!--Botão editar-->
+           
+
+
+          </tr>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="modal<?php echo $dados['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Deseja realmente deletar esse Cadastro?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                  <form action="php_action/delete.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+                    <button type="submit" name="btn-deletar" class="btn btn-danger">Sim quero deletar</button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+     
