@@ -10,6 +10,9 @@ import { UsuariosComponent } from './components/pages/usuarios/usuarios.componen
 import { NovaOngComponent } from './components/pages/nova-ong/nova-ong.component';
 import { OngComponent } from './components/pages/ong/ong.component';
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
+import { CombosComponent } from './components/pages/combos/combos.component';
+import { NovoComboComponent } from './components/pages/novo-combo/novo-combo.component';
+import { EditOngComponent } from './components/pages/edit-ong/edit-ong.component';
 
 
 
@@ -19,10 +22,14 @@ const routes: Routes = [
   {path:'administracao', component: AdministracaoComponent },
   {path:'banners',component:BannersComponent},
   {path:'combo',component:ComboComponent},
+  {path:'combos',component:CombosComponent},
   {path:'ongs',component:OngsComponent},
   {path:'usuarios',component:UsuariosComponent},
   {path:'cadastro', component:CadastroComponent},  
   {path:'ongs/new',component:NovaOngComponent},
+  {path:'combos/new',component:NovoComboComponent},
+  {path:'combos/:id',component:ComboComponent},
+  {path:'ongs/edit/:id',component:EditOngComponent},
   {path:'ongs/:id',component:OngComponent}
   
  

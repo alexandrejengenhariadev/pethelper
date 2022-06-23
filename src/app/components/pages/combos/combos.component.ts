@@ -14,7 +14,7 @@ export class CombosComponent implements OnInit {
   combos:Combo[] = []
   baseApiUrl = environment.baseApiUrl
   
-  searchTerm:string='';
+
 
   constructor(private comboService: ComboService) { }
 

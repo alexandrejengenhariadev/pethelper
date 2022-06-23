@@ -4,7 +4,7 @@ export interface Combo {
     produto2:string,
     produto3:string,
     produto4:string,
-    valor:number    
+    valor:string,   
     created_at?:string,
     updated_at?:string
 

@@ -24,4 +24,13 @@ export class ComboService {
   createCombo(formData:FormData):Observable<FormData>{
     return this.http.post<FormData>(this.apiUrl,formData);
   }
+  removeCombo(id:number){
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
+  }
+  updateCombo(id:number, formData:FormData):Observable<FormData>{
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<FormData>(url, formData);
+  }
+
 }
